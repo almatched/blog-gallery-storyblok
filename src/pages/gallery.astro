@@ -4,12 +4,12 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const storyblokApi = useStoryblokApi();
-const { data } = await storyblokApi.get("cdn/stories/blog", {
+const { data } = await storyblokApi.get("cdn/stories/images", {
   version: import.meta.env.DEV ? "draft" : "published",
 });
 const content = data.story.content;
 ---
 
-<BaseLayout pageTitle="Blog">
+<BaseLayout pageTitle="Gallery">
   <StoryblokComponent blok={content} />
 </BaseLayout>

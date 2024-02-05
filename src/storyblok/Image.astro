@@ -1,0 +1,9 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+
+const { blok } = Astro.props;
+---
+<article {...storyblokEditable(blok)}>
+    <img src={blok.image.filename} />
+    <p>{blok.description}</p>
+</article>
