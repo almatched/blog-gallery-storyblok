@@ -24,3 +24,28 @@ const { pageTitle } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style>
+  html {
+    font-family: system-ui;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    grid-column: 2;
+  }
+
+  div {
+    margin-bottom: 2rem;
+  }
+
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 60vw) 1fr;
+    gap: 1rem;
+  }
+</style>
