@@ -107,6 +107,6 @@ a {
   text-decoration: none;
 }
 
-li {
-  margin-bottom: 1.5rem;
+p {
+  width: 70ch;
 }

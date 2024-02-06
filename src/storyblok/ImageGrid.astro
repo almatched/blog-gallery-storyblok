@@ -26,8 +26,47 @@ const { blok } = Astro.props;
   {
     posts.map((post) => (
       <>
-        <div>{post.gallery.map((image) => <img src={image.filename} />)}</div>
+        {post.gallery.map((image) => (
+          <li>
+            <img src={image.filename} />
+          </li>
+        ))}
       </>
     ))
   }
 </ul>
+
+<style>
+  ul {
+    --min: 15rem;
+    --aspect-ratio: 4/3;
+    --gap: .5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    height: max(15vh, 15rem);
+    flex: 1 1 var(--min);
+  }
+
+  @supports (aspect-ratio: 1) {
+    li {
+      aspect-ratio: var(--aspect-ratio);
+      height: auto;
+    }
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+</style>
