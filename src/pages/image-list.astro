@@ -10,6 +10,6 @@ const { data } = await storyblokApi.get("cdn/stories/images", {
 const content = data.story.content;
 ---
 
-<BaseLayout pageTitle="Gallery">
+<BaseLayout pageTitle="Image List">
   <StoryblokComponent blok={content} />
 </BaseLayout>

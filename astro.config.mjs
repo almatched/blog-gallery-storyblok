@@ -21,6 +21,7 @@ export default defineConfig({
                 blogPostList: 'storyblok/BlogPostList',
                 page: 'storyblok/Page',
                 image: 'storyblok/Image',
+                imageList: 'storyblok/ImageList',
                 imageGrid: 'storyblok/ImageGrid',
             },
             apiOptions: {
